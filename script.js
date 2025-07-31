@@ -1,3 +1,16 @@
+// Initialize language immediately when script loads
+document.documentElement.setAttribute('lang', 'dari');
+document.documentElement.setAttribute('dir', 'rtl');
+
+// Add RTL class as soon as possible
+if (document.body) {
+    document.body.classList.add('rtl');
+} else {
+    document.addEventListener('DOMContentLoaded', function() {
+        document.body.classList.add('rtl');
+    });
+}
+
 // Fixed script.js - Language initialization bug fix
 let currentLang = 'dari'; // Default to Dari
 
@@ -115,6 +128,40 @@ function toggleFAQ(element) {
     }
 }
 
+// Gallery Filter Functionality
+function initGalleryFilter() {
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    const galleryItems = document.querySelectorAll('.gallery-item');
+    
+    if (filterBtns.length === 0) return;
+    
+    filterBtns.forEach(btn => {
+        btn.addEventListener('click', function() {
+            // Remove active class from all buttons
+            filterBtns.forEach(b => b.classList.remove('active'));
+            // Add active class to clicked button
+            this.classList.add('active');
+            
+            const filter = this.getAttribute('data-filter');
+            
+            galleryItems.forEach(item => {
+                if (filter === 'all' || item.getAttribute('data-category') === filter) {
+                    item.style.display = 'block';
+                    setTimeout(() => {
+                        item.style.opacity = '1';
+                        item.style.transform = 'scale(1)';
+                    }, 10);
+                } else {
+                    item.style.opacity = '0';
+                    item.style.transform = 'scale(0.8)';
+                    setTimeout(() => {
+                        item.style.display = 'none';
+                    }, 300);
+                }
+            });
+        });
+    });
+}
 
 // Hero Slider
 function initHeroSlider() {
@@ -266,7 +313,7 @@ function initMobileMenuClose() {
     });
 }
 
-// Initialize page language properly
+// Initialize page language properly - UPDATED (removed setTimeout)
 function initializePageLanguage() {
     // Only set RTL class and attributes, don't update content immediately
     document.body.classList.add('rtl');
@@ -285,13 +332,11 @@ function initializePageLanguage() {
         themeText.textContent = 'تاریک';
     }
     
-    // Update content after a small delay to ensure DOM is ready
-    setTimeout(() => {
-        updateLanguageContent();
-    }, 100);
+    // Update content immediately (NO setTimeout)
+    updateLanguageContent();
 }
 
-// Load saved preferences
+// Load saved preferences - UPDATED (removed setTimeout)
 function loadPreferences() {
     const savedTheme = localStorage.getItem('theme');
     const savedLanguage = localStorage.getItem('language');
@@ -372,7 +417,32 @@ function validateFieldRealTime(field) {
     return isValid;
 }
 
-// Initialize all functions when DOM is loaded
+// Search function
+function performSearch() {
+    const query = document.getElementById('searchInput').value.trim().toLowerCase();
+    if (!query) return;
+    
+    // Search current page content
+    const searchableElements = document.querySelectorAll('h1, h2, h3, p, .package-title, .service-title');
+    let found = false;
+    
+    searchableElements.forEach(el => {
+        const text = el.textContent.toLowerCase();
+        if (text.includes(query) && !found) {
+            el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            el.style.backgroundColor = 'yellow';
+            setTimeout(() => el.style.backgroundColor = '', 3000);
+            found = true;
+        }
+    });
+    
+    if (!found) {
+        const message = currentLang === 'dari' ? 'نتیجه‌ای یافت نشد' : 'No results found';
+        alert(message);
+    }
+}
+
+// Initialize all functions when DOM is loaded - UPDATED
 document.addEventListener('DOMContentLoaded', function() {
     // Load preferences first
     loadPreferences();
@@ -419,6 +489,20 @@ document.addEventListener('DOMContentLoaded', function() {
                 }
             });
         });
+    }
+    
+    // CRITICAL: Add this at the very end to show content
+    document.body.classList.add('language-loaded');
+});
+
+// Update search placeholder on language change
+document.addEventListener('languageChanged', function() {
+    const searchInput = document.getElementById('searchInput');
+    if (searchInput) {
+        const placeholder = searchInput.getAttribute(`data-${currentLang}`);
+        if (placeholder) {
+            searchInput.placeholder = placeholder;
+        }
     }
 });
 

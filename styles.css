@@ -5809,3 +5809,58 @@ body.rtl .package-actions {
 }
 
 /* ===== END REDESIGNED PACKAGES STYLES =====*/
+
+.search-container {
+    display: flex;
+    align-items: center;
+    background: var(--card-bg-light);
+    border-radius: 25px;
+    padding: 5px;
+    border: 1px solid var(--border-color);
+    margin-left: 1rem;
+}
+
+body.dark .search-container {
+    background: var(--card-bg-dark);
+}
+
+#searchInput {
+    border: none;
+    outline: none;
+    padding: 8px 15px;
+    background: transparent;
+    color: var(--text-primary);
+    width: 180px;
+    font-size: 0.9rem;
+}
+
+.search-btn {
+    background: var(--primary-color);
+    border: none;
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    color: white;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@media (max-width: 768px) {
+    .search-container {
+        width: 100%;
+        margin: 1rem 0;
+    }
+    #searchInput { width: 100%; }
+}
+/* Prevent flash of English content */
+body:not(.language-loaded) [data-en][data-dari] {
+    visibility: hidden;
+}
+
+/* Show content once language is loaded */
+body.language-loaded [data-en][data-dari] {
+    visibility: visible;
+    transition: visibility 0.1s ease;
+}

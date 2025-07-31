@@ -1,35 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Kayhan Studio - Home</title>
     <!-- Font Awesome Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
     <!-- Dari Font Support -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/vazir-font/30.1.0/font-face.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/vazir-font/30.1.0/font-face.css" rel="stylesheet" />
     <!-- Main Stylesheet -->
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css" />
 </head>
+
 <body>
     <!-- Header -->
     <header>
         <nav class="container">
             <div class="logo">
-                <a href="index.html"><img src="images/logo.png" alt="Kayhan Studio Logo" class="logo-image"></a>
-                
+                <a href="index.html"><img src="images/logo.png" alt="Kayhan Studio Logo" class="logo-image" /></a>
             </div>
             <div class="mobile-menu-toggle" onclick="toggleMobileMenu()">
                 <i class="fas fa-bars"></i>
             </div>
             <div class="nav-right" id="navMenu">
                 <ul class="nav-links">
-                    <li><a href="index.html" class="active" data-en="Home" data-dari="خانه">Home</a></li>
-                    <li><a href="about.html" data-en="About" data-dari="درباره ما">About</a></li>
-                    <li><a href="services.html" data-en="Services" data-dari="خدمات">Services</a></li>
-                    <li><a href="gallery.html" data-en="Gallery" data-dari="گالری">Gallery</a></li>
-                    <li><a href="contact.html" data-en="Contact" data-dari="تماس">Contact</a></li>
+                    <li>
+                        <a href="index.html" class="active" data-en="Home" data-dari="خانه">Home</a>
+                    </li>
+                    <li>
+                        <a href="about.html" data-en="About" data-dari="درباره ما">About</a>
+                    </li>
+                    <li>
+                        <a href="services.html" data-en="Services" data-dari="خدمات">Services</a>
+                    </li>
+                    <li>
+                        <a href="gallery.html" data-en="Gallery" data-dari="گالری">Gallery</a>
+                    </li>
+                    <li>
+                        <a href="contact.html" data-en="Contact" data-dari="تماس">Contact</a>
+                    </li>
                 </ul>
+
                 <button class="language-toggle" onclick="toggleLanguage()">
                     <i class="fas fa-globe"></i>
                     <span id="lang-text">دری</span>
@@ -38,6 +50,14 @@
                     <i class="fas fa-moon" id="theme-icon"></i>
                     <span id="theme-text">Dark</span>
                 </button>
+
+                <div class="search-container">
+                    <input type="text" id="searchInput" data-en="Search..." data-dari="جستجو..."
+                        placeholder="Search..." />
+                    <button type="button" class="search-btn" onclick="performSearch()">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </div>
             </div>
         </nav>
     </header>
@@ -45,20 +65,30 @@
     <!-- Hero Section -->
     <section id="home" class="hero">
         <div class="hero-background">
-            <div class="hero-slide active" style="background-image: url('images/IMG_4133.JPG');"></div>
-            <div class="hero-slide" style="background-image: url('images/IMG_2857.JPG');"></div>
-            <div class="hero-slide" style="background-image: url('images/IMG_1173.JPG');"></div>
-            <div class="hero-slide" style="background-image: url('images/IMG_5785[1].JPG');"></div>
-            <div class="hero-slide" style="background-image: url('https://images.unsplash.com/photo-1555252333-9f8e92e65df9?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80');"></div>
+            <div class="hero-slide active" style="background-image: url('images/IMG_4133.JPG')"></div>
+            <div class="hero-slide" style="background-image: url('images/IMG_2857.JPG')"></div>
+            <div class="hero-slide" style="background-image: url('images/IMG_1173.JPG')"></div>
+            <div class="hero-slide" style="background-image: url('images/IMG_5785[1].JPG')"></div>
+            <div class="hero-slide" style="
+            background-image: url('https://images.unsplash.com/photo-1555252333-9f8e92e65df9?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80');
+          "></div>
         </div>
         <div class="hero-overlay"></div>
         <div class="container">
             <div class="hero-content">
-                <h1 data-en="Welcome to Kayhan Studio" data-dari="به استدیو کیهان خوش آمدید">Welcome to Kayhan Studio</h1>
-                <p data-en="Professional birthday celebration photography and memorable moments capture" data-dari="عکاسی حرفه‌ای جشن تولد و ثبت لحظات به‌یادماندنی">Professional birthday celebration photography and memorable moments capture</p>
+                <h1 data-en="Welcome to Kayhan Studio" data-dari="به استدیو کیهان خوش آمدید">
+                    Welcome to Kayhan Studio
+                </h1>
+                <p data-en="Professional birthday celebration photography and memorable moments capture"
+                    data-dari="عکاسی حرفه‌ای جشن تولد و ثبت لحظات به‌یادماندنی">
+                    Professional birthday celebration photography and memorable moments
+                    capture
+                </p>
                 <div class="hero-buttons">
-                    <a href="services.html" class="cta-button" data-en="View Our Packages" data-dari="مشاهده بسته‌های ما">View Our Packages</a>
-                    <a href="contact.html" class="cta-button-secondary" data-en="Book a Session" data-dari="رزرو جلسه">Book a Session</a>
+                    <a href="services.html" class="cta-button" data-en="View Our Packages"
+                        data-dari="مشاهده بسته‌های ما">View Our Packages</a>
+                    <a href="contact.html" class="cta-button-secondary" data-en="Book a Session"
+                        data-dari="رزرو جلسه">Book a Session</a>
                 </div>
             </div>
         </div>
@@ -66,437 +96,518 @@
 
     <!-- Birthday Celebration Packages -->
 
-<section class="section birthday-packages" id="birthday-packages">
-    <div class="container">
-        <div class="section-header">
-            <h2 class="section-title" data-en="Birthday Celebration Packages" data-dari="بسته‌های جشن تولد">Birthday Celebration Packages</h2>
-            <p class="section-subtitle" data-en="Professional photography packages for your special birthday celebrations" data-dari="بسته‌های عکاسی حرفه‌ای برای جشن‌های تولد خاص شما">Professional photography packages for your special birthday celebrations</p>
-        </div>
-        
-        <div class="packages-grid-redesigned">
-            <!-- Diamond Package -->
-            <div class="package-card-redesigned diamond featured fade-in">
-                <div class="package-badge-redesigned">
-                    <span data-en="Most Popular" data-dari="محبوب‌ترین">Most Popular</span>
-                </div>
-                <div class="package-header">
-                    <div class="package-icon diamond">
-                        <i class="fas fa-gem"></i>
-                    </div>
-                    <div class="package-title-price">
-                        <h3 class="package-title" data-en="Diamond Package" data-dari="بسته الماس">Diamond Package</h3>
-                        <div class="package-price">
-                            <span class="price-amount">6,690</span>
-                            <span class="currency">AFN</span>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="package-content">
-                    <div class="package-duration">
-                        <i class="fas fa-clock"></i>
-                        <span data-en="2 Hour Session" data-dari="جلسه ۲ ساعته">2 Hour Session</span>
-                    </div>
-                    
-                    <div class="package-capacity">
-                        <i class="fas fa-users"></i>
-                        <span data-en="For 15 People" data-dari="برای ۱۵ نفر">For 15 People</span>
-                    </div>
-                    
-                    <ul class="package-features-redesigned">
-                        <li>
-                            <i class="fas fa-camera"></i>
-                            <span data-en="20 professional edited photos" data-dari="۲۰ قطعه عکس پروفیشنل">20 professional edited photos</span>
-                        </li>
-                        <li>
-                            <i class="fas fa-frame"></i>
-                            <span data-en="4 photos with premium frames" data-dari="۴ قطعه عکس همرای ادیت">4 photos with premium frames</span>
-                        </li>
-                        <li>
-                            <i class="fas fa-video"></i>
-                            <span data-en="1 professional video (5 min)" data-dari="۱ ویدیوی پروفیشنل ۵ دقیقه یی">1 professional video (5 min)</span>
-                        </li>
-                        <li>
-                            <i class="fas fa-birthday-cake"></i>
-                            <span data-en="2 kg special cake" data-dari="دو کیلو کیک خامه یی">2 kg special cake</span>
-                        </li>
-                        <li>
-                            <i class="fas fa-cookie-bite"></i>
-                            <span data-en="1 kg regular cake" data-dari="یک کیلو قلچه">1 kg regular cake</span>
-                        </li>
-                        <li>
-                            <i class="fas fa-balloons"></i>
-                            <span data-en="Decorations & balloons" data-dari="انرژی و چوپ">Decorations & balloons</span>
-                        </li>
-                        <li>
-                            <i class="fas fa-candle-holder"></i>
-                            <span data-en="Candles & lighting effects" data-dari="شمع، نور افشان">Candles & lighting effects</span>
-                        </li>
-                        <li>
-                            <i class="fas fa-photo-film"></i>
-                            <span data-en="Professional backdrops" data-dari="استیلیج های آماده">Professional backdrops</span>
-                        </li>
-                    </ul>
-                    
-                    <div class="package-extra-info">
-                        <div class="extra-cost">
-                            <i class="fas fa-info-circle"></i>
-                            <span data-en="Extra person: 150 AFN" data-dari="فی نفر اضافی: ۱۵۰ افغانی">Extra person: 150 AFN</span>
-                        </div>
-                    </div>
-                    
-                    <div class="package-actions">
-                        <a href="contact.html" class="btn-package primary" data-en="Book Diamond Package" data-dari="رزرو بسته الماس">Book Diamond Package</a>
-                        <a href="gallery.html?filter=birthday" class="btn-package secondary" data-en="View Gallery" data-dari="مشاهده گالری">View Gallery</a>
-                    </div>
-                </div>
+    <section class="section birthday-packages" id="birthday-packages">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title" data-en="Birthday Celebration Packages" data-dari="بسته‌های جشن تولد">
+                    Birthday Celebration Packages
+                </h2>
+                <p class="section-subtitle"
+                    data-en="Professional photography packages for your special birthday celebrations"
+                    data-dari="بسته‌های عکاسی حرفه‌ای برای جشن‌های تولد خاص شما">
+                    Professional photography packages for your special birthday
+                    celebrations
+                </p>
             </div>
 
-            <!-- Gold Package -->
-            <div class="package-card-redesigned gold fade-in">
-                <div class="package-badge-redesigned featured">
-                    <span data-en="Recommended" data-dari="پیشنهادی">Recommended</span>
-                </div>
-                <div class="package-header">
-                    <div class="package-icon gold">
-                        <i class="fas fa-crown"></i>
+            <div class="packages-grid-redesigned">
+                <!-- Diamond Package -->
+                <div class="package-card-redesigned diamond featured fade-in">
+                    <div class="package-badge-redesigned">
+                        <span data-en="Most Popular" data-dari="محبوب‌ترین">Most Popular</span>
                     </div>
-                    <div class="package-title-price">
-                        <h3 class="package-title" data-en="Gold Package" data-dari="بسته طلایی">Gold Package</h3>
-                        <div class="package-price">
-                            <span class="price-amount">4,290</span>
-                            <span class="currency">AFN</span>
+                    <div class="package-header">
+                        <div class="package-icon diamond">
+                            <i class="fas fa-gem"></i>
+                        </div>
+                        <div class="package-title-price">
+                            <h3 class="package-title" data-en="Diamond Package" data-dari="بسته الماس">
+                                Diamond Package
+                            </h3>
+                            <div class="package-price">
+                                <span class="price-amount">6,690</span>
+                                <span class="currency">AFN</span>
+                            </div>
                         </div>
                     </div>
-                </div>
-                
-                <div class="package-content">
-                    <div class="package-duration">
-                        <i class="fas fa-clock"></i>
-                        <span data-en="1.5 Hour Session" data-dari="جلسه ۱.۵ ساعته">1.5 Hour Session</span>
-                    </div>
-                    
-                    <div class="package-capacity">
-                        <i class="fas fa-users"></i>
-                        <span data-en="For 8 People" data-dari="برای ۸ نفر">For 8 People</span>
-                    </div>
-                    
-                    <ul class="package-features-redesigned">
-                        <li>
-                            <i class="fas fa-camera"></i>
-                            <span data-en="15 professional edited photos" data-dari="۱۵ قطعه عکس پروفیشنل">15 professional edited photos</span>
-                        </li>
-                        <li>
-                            <i class="fas fa-frame"></i>
-                            <span data-en="2 photos with frames" data-dari="۲ قطعه عکس همرای ادیت">2 photos with frames</span>
-                        </li>
-                        <li>
-                            <i class="fas fa-video"></i>
-                            <span data-en="1 professional video (1 min)" data-dari="۱ ویدیوی ۱ دقیقه یی">1 professional video (1 min)</span>
-                        </li>
-                        <li>
-                            <i class="fas fa-birthday-cake"></i>
-                            <span data-en="1 kg birthday cake" data-dari="یک کیلو کیک سالگره">1 kg birthday cake</span>
-                        </li>
-                        <li>
-                            <i class="fas fa-balloons"></i>
-                            <span data-en="Decorations & balloons" data-dari="انرژی و چوپ">Decorations & balloons</span>
-                        </li>
-                        <li>
-                            <i class="fas fa-candle-holder"></i>
-                            <span data-en="Candles & lighting" data-dari="شمع، نور افشان">Candles & lighting</span>
-                        </li>
-                        <li>
-                            <i class="fas fa-photo-film"></i>
-                            <span data-en="Professional backdrops" data-dari="استیلیج های آماده">Professional backdrops</span>
-                        </li>
-                    </ul>
-                    
-                    <div class="package-extra-info">
-                        <div class="extra-cost">
-                            <i class="fas fa-info-circle"></i>
-                            <span data-en="Extra person: 100 AFN" data-dari="فی نفر اضافی: ۱۰۰ افغانی">Extra person: 100 AFN</span>
-                        </div>
-                    </div>
-                    
-                    <div class="package-actions">
-                        <a href="contact.html" class="btn-package primary" data-en="Book Gold Package" data-dari="رزرو بسته طلایی">Book Gold Package</a>
-                        <a href="gallery.html?filter=birthday" class="btn-package secondary" data-en="View Gallery" data-dari="مشاهده گالری">View Gallery</a>
-                    </div>
-                </div>
-            </div>
 
-            <!-- Silver Package -->
-            <div class="package-card-redesigned silver fade-in">
-                <div class="package-header">
-                    <div class="package-icon silver">
-                        <i class="fas fa-medal"></i>
-                    </div>
-                    <div class="package-title-price">
-                        <h3 class="package-title" data-en="Silver Package" data-dari="بسته نقره‌ای">Silver Package</h3>
-                        <div class="package-price">
-                            <span class="price-amount">1,690</span>
-                            <span class="currency">AFN</span>
+                    <div class="package-content">
+                        <div class="package-duration">
+                            <i class="fas fa-clock"></i>
+                            <span data-en="2 Hour Session" data-dari="جلسه ۲ ساعته">2 Hour Session</span>
                         </div>
-                    </div>
-                </div>
-                
-                <div class="package-content">
-                    <div class="package-duration">
-                        <i class="fas fa-clock"></i>
-                        <span data-en="1 Hour Session" data-dari="جلسه ۱ ساعته">1 Hour Session</span>
-                    </div>
-                    
-                    <div class="package-capacity">
-                        <i class="fas fa-users"></i>
-                        <span data-en="For 5 People" data-dari="برای ۵ نفر">For 5 People</span>
-                    </div>
-                    
-                    <ul class="package-features-redesigned">
-                        <li>
-                            <i class="fas fa-camera"></i>
-                            <span data-en="10 professional edited photos" data-dari="۱۰ قطعه عکس پروفیشنل">10 professional edited photos</span>
-                        </li>
-                        <li>
-                            <i class="fas fa-candle-holder"></i>
-                            <span data-en="1 celebration candle" data-dari="یک عدد شمع">1 celebration candle</span>
-                        </li>
-                        <li>
-                            <i class="fas fa-photo-film"></i>
-                            <span data-en="Professional backdrops" data-dari="استیلیج های آماده">Professional backdrops</span>
-                        </li>
-                        <li>
-                            <i class="fas fa-coffee"></i>
-                            <span data-en="Beautiful cup services" data-dari="خدمات ظروف">Beautiful cup services</span>
-                        </li>
-                    </ul>
-                    
-                    <div class="package-extra-info">
-                        <div class="extra-cost">
-                            <i class="fas fa-info-circle"></i>
-                            <span data-en="Extra person: 50 AFN" data-dari="فی نفر اضافی: ۵۰ افغانی">Extra person: 50 AFN</span>
-                        </div>
-                    </div>
-                    
-                    <div class="package-actions">
-                        <a href="contact.html" class="btn-package primary" data-en="Book Silver Package" data-dari="رزرو بسته نقره‌ای">Book Silver Package</a>
-                        <a href="gallery.html?filter=birthday" class="btn-package secondary" data-en="View Gallery" data-dari="مشاهده گالری">View Gallery</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<!-- Wedding Photography Packages - REDESIGNED -->
-<section class="section wedding-packages" id="wedding-packages">
-    <div class="container">
-        <div class="section-header">
-            <h2 class="section-title" data-en="Wedding Photography Packages 2025" data-dari="بسته‌های عکاسی عروسی ۲۰۲۵">Wedding Photography Packages 2025</h2>
-            <p class="section-subtitle" data-en="Professional wedding photography and videography services with premium equipment" data-dari="خدمات حرفه‌ای عکاسی و فیلمبرداری عروسی با تجهیزات پریمیوم">Professional wedding photography and videography services with premium equipment</p>
-        </div>
-        
-        <div class="packages-grid-redesigned">
-            <!-- Small Wedding Package -->
-            <div class="package-card-redesigned wedding-small fade-in">
-                <div class="package-header">
-                    <div class="package-icon wedding-small">
-                        <i class="fas fa-camera"></i>
-                    </div>
-                    <div class="package-title-price">
-                        <h3 class="package-title" data-en="Small Package" data-dari="بسته کوچک">Small Package</h3>
-                        <div class="package-quality">FULL HD</div>
-                        <div class="package-price">
-                            <span class="price-amount">20,000</span>
-                            <span class="currency">AFN</span>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="package-content">
-                    <ul class="package-features-redesigned">
-                        <li>
-                            <i class="fas fa-video"></i>
-                            <span data-en="2 Professional videographers" data-dari="دو پایه کمره فیلمبرداری">2 Professional videographers</span>
-                        </li>
-                        <li>
-                            <i class="fas fa-camera"></i>
-                            <span data-en="Professional photography" data-dari="کمره عکاسی">Professional photography</span>
-                        </li>
-                        <li>
-                            <i class="fas fa-helicopter"></i>
-                            <span data-en="Drone coverage" data-dari="کمره درون">Drone coverage</span>
-                        </li>
-                        <li>
-                            <i class="fas fa-sparkles"></i>
-                            <span data-en="4 Sparkler fountains" data-dari="زر افشان ۴ دانه">4 Sparkler fountains</span>
-                        </li>
-                        <li>
-                            <i class="fas fa-film"></i>
-                            <span data-en="Wedding film with songs" data-dari="تدوین فلم مردانه و زنانه">Wedding film with songs</span>
-                        </li>
-                    </ul>
-                    
-                    <div class="package-actions">
-                        <a href="contact.html" class="btn-package primary" data-en="Book Small Package" data-dari="رزرو پکیج کوچک">Book Small Package</a>
-                        <a href="gallery.html?filter=wedding" class="btn-package secondary" data-en="View Gallery" data-dari="مشاهده گالری">View Gallery</a>
-                    </div>
-                </div>
-            </div>
 
-            <!-- Medium Wedding Package -->
-            <div class="package-card-redesigned wedding-medium featured fade-in">
-                <div class="package-badge-redesigned featured">
-                    <span data-en="Most Popular" data-dari="محبوب‌ترین">Most Popular</span>
-                </div>
-                <div class="package-header">
-                    <div class="package-icon wedding-medium">
-                        <i class="fas fa-video"></i>
-                    </div>
-                    <div class="package-title-price">
-                        <h3 class="package-title" data-en="Medium Package" data-dari="بسته متوسط">Medium Package</h3>
-                        <div class="package-quality">FULL HD</div>
-                        <div class="package-price">
-                            <span class="price-amount">44,500</span>
-                            <span class="currency">AFN</span>
+                        <div class="package-capacity">
+                            <i class="fas fa-users"></i>
+                            <span data-en="For 15 People" data-dari="برای ۱۵ نفر">For 15 People</span>
                         </div>
-                    </div>
-                </div>
-                
-                <div class="package-content">
-                    <ul class="package-features-redesigned">
-                        <li>
-                            <i class="fas fa-video"></i>
-                            <span data-en="2 Sony professional videographers" data-dari="دو پایه کمره سونی">2 Sony professional videographers</span>
-                        </li>
-                        <li>
-                            <i class="fas fa-camera-movie"></i>
-                            <span data-en="Professional gimbal camera" data-dari="کمره با گیمبل">Professional gimbal camera</span>
-                        </li>
-                        <li>
-                            <i class="fas fa-magic"></i>
-                            <span data-en="3D laser light show" data-dari="لیزر لایت ۳ بعدی">3D laser light show</span>
-                        </li>
-                        <li>
-                            <i class="fas fa-camera"></i>
-                            <span data-en="Professional photography" data-dari="کمره عکاسی">Professional photography</span>
-                        </li>
-                        <li>
-                            <i class="fas fa-helicopter"></i>
-                            <span data-en="Drone coverage" data-dari="کمره درون">Drone coverage</span>
-                        </li>
-                        <li>
-                            <i class="fas fa-lightbulb"></i>
-                            <span data-en="Lighting & fog effects" data-dari="لایتنگ و دود">Lighting & fog effects</span>
-                        </li>
-                        <li>
-                            <i class="fas fa-cloud"></i>
-                            <span data-en="2 Colored smoke (outdoor)" data-dari="دود رنگه ۲ دانه">2 Colored smoke (outdoor)</span>
-                        </li>
-                        <li>
-                            <i class="fas fa-sparkles"></i>
-                            <span data-en="8 Sparkler fountains" data-dari="زرافشان ۸ دانه">8 Sparkler fountains</span>
-                        </li>
-                        <li>
-                            <i class="fas fa-book"></i>
-                            <span data-en="Traditional album" data-dari="آلبوم هندی">Traditional album</span>
-                        </li>
-                        <li>
-                            <i class="fas fa-film"></i>
-                            <span data-en="Wedding film with songs" data-dari="تدوین فلم">Wedding film with songs</span>
-                        </li>
-                    </ul>
-                    
-                    <div class="package-actions">
-                        <a href="contact.html" class="btn-package primary" data-en="Book Medium Package" data-dari="رزرو پکیج متوسط">Book Medium Package</a>
-                        <a href="gallery.html?filter=wedding" class="btn-package secondary" data-en="View Gallery" data-dari="مشاهده گالری">View Gallery</a>
-                    </div>
-                </div>
-            </div>
 
-            <!-- Golden Wedding Package -->
-            <div class="package-card-redesigned wedding-golden premium fade-in">
-                <div class="package-badge-redesigned premium">
-                    <span data-en="Premium" data-dari="پریمیوم">Premium</span>
-                </div>
-                <div class="package-header">
-                    <div class="package-icon wedding-golden">
-                        <i class="fas fa-crown"></i>
-                    </div>
-                    <div class="package-title-price">
-                        <h3 class="package-title" data-en="Golden Package" data-dari="بسته طلایی">Golden Package</h3>
-                        <div class="package-quality">4K ULTRA HD</div>
-                        <div class="package-price">
-                            <span class="price-amount">65,500</span>
-                            <span class="currency">AFN</span>
+                        <ul class="package-features-redesigned">
+                            <li>
+                                <i class="fas fa-camera"></i>
+                                <span data-en="20 professional edited photos" data-dari="۲۰ قطعه عکس پروفیشنل">20
+                                    professional edited photos</span>
+                            </li>
+                            <li>
+                                <i class="fas fa-frame"></i>
+                                <span data-en="4 photos with premium frames" data-dari="۴ قطعه عکس همرای ادیت">4 photos
+                                    with premium frames</span>
+                            </li>
+                            <li>
+                                <i class="fas fa-video"></i>
+                                <span data-en="1 professional video (5 min)" data-dari="۱ ویدیوی پروفیشنل ۵ دقیقه یی">1
+                                    professional video (5 min)</span>
+                            </li>
+                            <li>
+                                <i class="fas fa-birthday-cake"></i>
+                                <span data-en="2 kg special cake" data-dari="دو کیلو کیک خامه یی">2 kg special
+                                    cake</span>
+                            </li>
+                            <li>
+                                <i class="fas fa-cookie-bite"></i>
+                                <span data-en="1 kg regular cake" data-dari="یک کیلو قلچه">1 kg regular cake</span>
+                            </li>
+                            <li>
+                                <i class="fas fa-balloons"></i>
+                                <span data-en="Decorations & balloons" data-dari="انرژی و چوپ">Decorations &
+                                    balloons</span>
+                            </li>
+                            <li>
+                                <i class="fas fa-candle-holder"></i>
+                                <span data-en="Candles & lighting effects" data-dari="شمع، نور افشان">Candles & lighting
+                                    effects</span>
+                            </li>
+                            <li>
+                                <i class="fas fa-photo-film"></i>
+                                <span data-en="Professional backdrops" data-dari="استیلیج های آماده">Professional
+                                    backdrops</span>
+                            </li>
+                        </ul>
+
+                        <div class="package-extra-info">
+                            <div class="extra-cost">
+                                <i class="fas fa-info-circle"></i>
+                                <span data-en="Extra person: 150 AFN" data-dari="فی نفر اضافی: ۱۵۰ افغانی">Extra person:
+                                    150 AFN</span>
+                            </div>
+                        </div>
+
+                        <div class="package-actions">
+                            <a href="contact.html" class="btn-package primary" data-en="Book Diamond Package"
+                                data-dari="رزرو بسته الماس">Book Diamond Package</a>
+                            <a href="gallery.html?filter=birthday" class="btn-package secondary" data-en="View Gallery"
+                                data-dari="مشاهده گالری">View Gallery</a>
                         </div>
                     </div>
                 </div>
-                
-                <div class="package-content">
-                    <ul class="package-features-redesigned">
-                        <li>
-                            <i class="fas fa-video"></i>
-                            <span data-en="2 Sony professional videographers" data-dari="دو پایه کمره سونی">2 Sony professional videographers</span>
-                        </li>
-                        <li>
-                            <i class="fas fa-camera-movie"></i>
-                            <span data-en="Sony gimbal videography" data-dari="کمره سونی با گیمبل">Sony gimbal videography</span>
-                        </li>
-                        <li>
-                            <i class="fas fa-camera"></i>
-                            <span data-en="Professional photography" data-dari="کمره عکاسی">Professional photography</span>
-                        </li>
-                        <li>
-                            <i class="fas fa-helicopter"></i>
-                            <span data-en="Drone coverage" data-dari="کمره درون">Drone coverage</span>
-                        </li>
-                        <li>
-                            <i class="fas fa-magic"></i>
-                            <span data-en="3D laser light (digital)" data-dari="لیزر لایت ۳ بعدی">3D laser light (digital)</span>
-                        </li>
-                        <li>
-                            <i class="fas fa-snowflake"></i>
-                            <span data-en="Digital lighting & ice fog" data-dari="لایتنگ و دود یخی">Digital lighting & ice fog</span>
-                        </li>
-                        <li>
-                            <i class="fas fa-star"></i>
-                            <span data-en="Ice sparkler fountains" data-dari="زرافشان یخه یی">Ice sparkler fountains</span>
-                        </li>
-                        <li>
-                            <i class="fas fa-cloud"></i>
-                            <span data-en="6 Colored smoke (outdoor)" data-dari="دود رنگه ۶ دانه">6 Colored smoke (outdoor)</span>
-                        </li>
-                        <li>
-                            <i class="fas fa-sparkles"></i>
-                            <span data-en="16 Sparklers" data-dari="زرافشان ۱۶ دانه">16 Sparklers</span>
-                        </li>
-                        <li>
-                            <i class="fas fa-book"></i>
-                            <span data-en="Special & family albums" data-dari="آلبوم خاص و فامیلی">Special & family albums</span>
-                        </li>
-                        <li>
-                            <i class="fas fa-image"></i>
-                            <span data-en="Large photo (60x90)" data-dari="چاپ عکس بزرگ ۶۰x۹۰">Large photo (60x90)</span>
-                        </li>
-                        <li>
-                            <i class="fas fa-film"></i>
-                            <span data-en="Wedding film with songs" data-dari="تدوین فیلم">Wedding film with songs</span>
-                        </li>
-                        <li>
-                            <i class="fas fa-hdd"></i>
-                            <span data-en="Hard drive (500GB)" data-dari="هاردیسک ۵۰۰ جی بی">Hard drive (500GB)</span>
-                        </li>
-                    </ul>
-                    
-                    <div class="package-actions">
-                        <a href="contact.html" class="btn-package primary" data-en="Book Golden Package" data-dari="رزرو پکیج طلایی">Book Golden Package</a>
-                        <a href="gallery.html?filter=wedding" class="btn-package secondary" data-en="View Gallery" data-dari="مشاهده گالری">View Gallery</a>
+
+                <!-- Gold Package -->
+                <div class="package-card-redesigned gold fade-in">
+                    <div class="package-badge-redesigned featured">
+                        <span data-en="Recommended" data-dari="پیشنهادی">Recommended</span>
+                    </div>
+                    <div class="package-header">
+                        <div class="package-icon gold">
+                            <i class="fas fa-crown"></i>
+                        </div>
+                        <div class="package-title-price">
+                            <h3 class="package-title" data-en="Gold Package" data-dari="بسته طلایی">
+                                Gold Package
+                            </h3>
+                            <div class="package-price">
+                                <span class="price-amount">4,290</span>
+                                <span class="currency">AFN</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="package-content">
+                        <div class="package-duration">
+                            <i class="fas fa-clock"></i>
+                            <span data-en="1.5 Hour Session" data-dari="جلسه ۱.۵ ساعته">1.5 Hour Session</span>
+                        </div>
+
+                        <div class="package-capacity">
+                            <i class="fas fa-users"></i>
+                            <span data-en="For 8 People" data-dari="برای ۸ نفر">For 8 People</span>
+                        </div>
+
+                        <ul class="package-features-redesigned">
+                            <li>
+                                <i class="fas fa-camera"></i>
+                                <span data-en="15 professional edited photos" data-dari="۱۵ قطعه عکس پروفیشنل">15
+                                    professional edited photos</span>
+                            </li>
+                            <li>
+                                <i class="fas fa-frame"></i>
+                                <span data-en="2 photos with frames" data-dari="۲ قطعه عکس همرای ادیت">2 photos with
+                                    frames</span>
+                            </li>
+                            <li>
+                                <i class="fas fa-video"></i>
+                                <span data-en="1 professional video (1 min)" data-dari="۱ ویدیوی ۱ دقیقه یی">1
+                                    professional video (1 min)</span>
+                            </li>
+                            <li>
+                                <i class="fas fa-birthday-cake"></i>
+                                <span data-en="1 kg birthday cake" data-dari="یک کیلو کیک سالگره">1 kg birthday
+                                    cake</span>
+                            </li>
+                            <li>
+                                <i class="fas fa-balloons"></i>
+                                <span data-en="Decorations & balloons" data-dari="انرژی و چوپ">Decorations &
+                                    balloons</span>
+                            </li>
+                            <li>
+                                <i class="fas fa-candle-holder"></i>
+                                <span data-en="Candles & lighting" data-dari="شمع، نور افشان">Candles & lighting</span>
+                            </li>
+                            <li>
+                                <i class="fas fa-photo-film"></i>
+                                <span data-en="Professional backdrops" data-dari="استیلیج های آماده">Professional
+                                    backdrops</span>
+                            </li>
+                        </ul>
+
+                        <div class="package-extra-info">
+                            <div class="extra-cost">
+                                <i class="fas fa-info-circle"></i>
+                                <span data-en="Extra person: 100 AFN" data-dari="فی نفر اضافی: ۱۰۰ افغانی">Extra person:
+                                    100 AFN</span>
+                            </div>
+                        </div>
+
+                        <div class="package-actions">
+                            <a href="contact.html" class="btn-package primary" data-en="Book Gold Package"
+                                data-dari="رزرو بسته طلایی">Book Gold Package</a>
+                            <a href="gallery.html?filter=birthday" class="btn-package secondary" data-en="View Gallery"
+                                data-dari="مشاهده گالری">View Gallery</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Silver Package -->
+                <div class="package-card-redesigned silver fade-in">
+                    <div class="package-header">
+                        <div class="package-icon silver">
+                            <i class="fas fa-medal"></i>
+                        </div>
+                        <div class="package-title-price">
+                            <h3 class="package-title" data-en="Silver Package" data-dari="بسته نقره‌ای">
+                                Silver Package
+                            </h3>
+                            <div class="package-price">
+                                <span class="price-amount">1,690</span>
+                                <span class="currency">AFN</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="package-content">
+                        <div class="package-duration">
+                            <i class="fas fa-clock"></i>
+                            <span data-en="1 Hour Session" data-dari="جلسه ۱ ساعته">1 Hour Session</span>
+                        </div>
+
+                        <div class="package-capacity">
+                            <i class="fas fa-users"></i>
+                            <span data-en="For 5 People" data-dari="برای ۵ نفر">For 5 People</span>
+                        </div>
+
+                        <ul class="package-features-redesigned">
+                            <li>
+                                <i class="fas fa-camera"></i>
+                                <span data-en="10 professional edited photos" data-dari="۱۰ قطعه عکس پروفیشنل">10
+                                    professional edited photos</span>
+                            </li>
+                            <li>
+                                <i class="fas fa-candle-holder"></i>
+                                <span data-en="1 celebration candle" data-dari="یک عدد شمع">1 celebration candle</span>
+                            </li>
+                            <li>
+                                <i class="fas fa-photo-film"></i>
+                                <span data-en="Professional backdrops" data-dari="استیلیج های آماده">Professional
+                                    backdrops</span>
+                            </li>
+                            <li>
+                                <i class="fas fa-coffee"></i>
+                                <span data-en="Beautiful cup services" data-dari="خدمات ظروف">Beautiful cup
+                                    services</span>
+                            </li>
+                        </ul>
+
+                        <div class="package-extra-info">
+                            <div class="extra-cost">
+                                <i class="fas fa-info-circle"></i>
+                                <span data-en="Extra person: 50 AFN" data-dari="فی نفر اضافی: ۵۰ افغانی">Extra person:
+                                    50 AFN</span>
+                            </div>
+                        </div>
+
+                        <div class="package-actions">
+                            <a href="contact.html" class="btn-package primary" data-en="Book Silver Package"
+                                data-dari="رزرو بسته نقره‌ای">Book Silver Package</a>
+                            <a href="gallery.html?filter=birthday" class="btn-package secondary" data-en="View Gallery"
+                                data-dari="مشاهده گالری">View Gallery</a>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
+    <!-- Wedding Photography Packages - REDESIGNED -->
+    <section class="section wedding-packages" id="wedding-packages">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title" data-en="Wedding Photography Packages 2025"
+                    data-dari="بسته‌های عکاسی عروسی ۲۰۲۵">
+                    Wedding Photography Packages 2025
+                </h2>
+                <p class="section-subtitle"
+                    data-en="Professional wedding photography and videography services with premium equipment"
+                    data-dari="خدمات حرفه‌ای عکاسی و فیلمبرداری عروسی با تجهیزات پریمیوم">
+                    Professional wedding photography and videography services with
+                    premium equipment
+                </p>
+            </div>
+
+            <div class="packages-grid-redesigned">
+                <!-- Small Wedding Package -->
+                <div class="package-card-redesigned wedding-small fade-in">
+                    <div class="package-header">
+                        <div class="package-icon wedding-small">
+                            <i class="fas fa-camera"></i>
+                        </div>
+                        <div class="package-title-price">
+                            <h3 class="package-title" data-en="Small Package" data-dari="بسته کوچک">
+                                Small Package
+                            </h3>
+                            <div class="package-quality">FULL HD</div>
+                            <div class="package-price">
+                                <span class="price-amount">20,000</span>
+                                <span class="currency">AFN</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="package-content">
+                        <ul class="package-features-redesigned">
+                            <li>
+                                <i class="fas fa-video"></i>
+                                <span data-en="2 Professional videographers" data-dari="دو پایه کمره فیلمبرداری">2
+                                    Professional videographers</span>
+                            </li>
+                            <li>
+                                <i class="fas fa-camera"></i>
+                                <span data-en="Professional photography" data-dari="کمره عکاسی">Professional
+                                    photography</span>
+                            </li>
+                            <li>
+                                <i class="fas fa-helicopter"></i>
+                                <span data-en="Drone coverage" data-dari="کمره درون">Drone coverage</span>
+                            </li>
+                            <li>
+                                <i class="fas fa-sparkles"></i>
+                                <span data-en="4 Sparkler fountains" data-dari="زر افشان ۴ دانه">4 Sparkler
+                                    fountains</span>
+                            </li>
+                            <li>
+                                <i class="fas fa-film"></i>
+                                <span data-en="Wedding film with songs" data-dari="تدوین فلم مردانه و زنانه">Wedding
+                                    film with songs</span>
+                            </li>
+                        </ul>
+
+                        <div class="package-actions">
+                            <a href="contact.html" class="btn-package primary" data-en="Book Small Package"
+                                data-dari="رزرو پکیج کوچک">Book Small Package</a>
+                            <a href="gallery.html?filter=wedding" class="btn-package secondary" data-en="View Gallery"
+                                data-dari="مشاهده گالری">View Gallery</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Medium Wedding Package -->
+                <div class="package-card-redesigned wedding-medium featured fade-in">
+                    <div class="package-badge-redesigned featured">
+                        <span data-en="Most Popular" data-dari="محبوب‌ترین">Most Popular</span>
+                    </div>
+                    <div class="package-header">
+                        <div class="package-icon wedding-medium">
+                            <i class="fas fa-video"></i>
+                        </div>
+                        <div class="package-title-price">
+                            <h3 class="package-title" data-en="Medium Package" data-dari="بسته متوسط">
+                                Medium Package
+                            </h3>
+                            <div class="package-quality">FULL HD</div>
+                            <div class="package-price">
+                                <span class="price-amount">44,500</span>
+                                <span class="currency">AFN</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="package-content">
+                        <ul class="package-features-redesigned">
+                            <li>
+                                <i class="fas fa-video"></i>
+                                <span data-en="2 Sony professional videographers" data-dari="دو پایه کمره سونی">2 Sony
+                                    professional videographers</span>
+                            </li>
+                            <li>
+                                <i class="fas fa-camera-movie"></i>
+                                <span data-en="Professional gimbal camera" data-dari="کمره با گیمبل">Professional gimbal
+                                    camera</span>
+                            </li>
+                            <li>
+                                <i class="fas fa-magic"></i>
+                                <span data-en="3D laser light show" data-dari="لیزر لایت ۳ بعدی">3D laser light
+                                    show</span>
+                            </li>
+                            <li>
+                                <i class="fas fa-camera"></i>
+                                <span data-en="Professional photography" data-dari="کمره عکاسی">Professional
+                                    photography</span>
+                            </li>
+                            <li>
+                                <i class="fas fa-helicopter"></i>
+                                <span data-en="Drone coverage" data-dari="کمره درون">Drone coverage</span>
+                            </li>
+                            <li>
+                                <i class="fas fa-lightbulb"></i>
+                                <span data-en="Lighting & fog effects" data-dari="لایتنگ و دود">Lighting & fog
+                                    effects</span>
+                            </li>
+                            <li>
+                                <i class="fas fa-cloud"></i>
+                                <span data-en="2 Colored smoke (outdoor)" data-dari="دود رنگه ۲ دانه">2 Colored smoke
+                                    (outdoor)</span>
+                            </li>
+                            <li>
+                                <i class="fas fa-sparkles"></i>
+                                <span data-en="8 Sparkler fountains" data-dari="زرافشان ۸ دانه">8 Sparkler
+                                    fountains</span>
+                            </li>
+                            <li>
+                                <i class="fas fa-book"></i>
+                                <span data-en="Traditional album" data-dari="آلبوم هندی">Traditional album</span>
+                            </li>
+                            <li>
+                                <i class="fas fa-film"></i>
+                                <span data-en="Wedding film with songs" data-dari="تدوین فلم">Wedding film with
+                                    songs</span>
+                            </li>
+                        </ul>
+
+                        <div class="package-actions">
+                            <a href="contact.html" class="btn-package primary" data-en="Book Medium Package"
+                                data-dari="رزرو پکیج متوسط">Book Medium Package</a>
+                            <a href="gallery.html?filter=wedding" class="btn-package secondary" data-en="View Gallery"
+                                data-dari="مشاهده گالری">View Gallery</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Golden Wedding Package -->
+                <div class="package-card-redesigned wedding-golden premium fade-in">
+                    <div class="package-badge-redesigned premium">
+                        <span data-en="Premium" data-dari="پریمیوم">Premium</span>
+                    </div>
+                    <div class="package-header">
+                        <div class="package-icon wedding-golden">
+                            <i class="fas fa-crown"></i>
+                        </div>
+                        <div class="package-title-price">
+                            <h3 class="package-title" data-en="Golden Package" data-dari="بسته طلایی">
+                                Golden Package
+                            </h3>
+                            <div class="package-quality">4K ULTRA HD</div>
+                            <div class="package-price">
+                                <span class="price-amount">65,500</span>
+                                <span class="currency">AFN</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="package-content">
+                        <ul class="package-features-redesigned">
+                            <li>
+                                <i class="fas fa-video"></i>
+                                <span data-en="2 Sony professional videographers" data-dari="دو پایه کمره سونی">2 Sony
+                                    professional videographers</span>
+                            </li>
+                            <li>
+                                <i class="fas fa-camera-movie"></i>
+                                <span data-en="Sony gimbal videography" data-dari="کمره سونی با گیمبل">Sony gimbal
+                                    videography</span>
+                            </li>
+                            <li>
+                                <i class="fas fa-camera"></i>
+                                <span data-en="Professional photography" data-dari="کمره عکاسی">Professional
+                                    photography</span>
+                            </li>
+                            <li>
+                                <i class="fas fa-helicopter"></i>
+                                <span data-en="Drone coverage" data-dari="کمره درون">Drone coverage</span>
+                            </li>
+                            <li>
+                                <i class="fas fa-magic"></i>
+                                <span data-en="3D laser light (digital)" data-dari="لیزر لایت ۳ بعدی">3D laser light
+                                    (digital)</span>
+                            </li>
+                            <li>
+                                <i class="fas fa-snowflake"></i>
+                                <span data-en="Digital lighting & ice fog" data-dari="لایتنگ و دود یخی">Digital lighting
+                                    & ice fog</span>
+                            </li>
+                            <li>
+                                <i class="fas fa-star"></i>
+                                <span data-en="Ice sparkler fountains" data-dari="زرافشان یخه یی">Ice sparkler
+                                    fountains</span>
+                            </li>
+                            <li>
+                                <i class="fas fa-cloud"></i>
+                                <span data-en="6 Colored smoke (outdoor)" data-dari="دود رنگه ۶ دانه">6 Colored smoke
+                                    (outdoor)</span>
+                            </li>
+                            <li>
+                                <i class="fas fa-sparkles"></i>
+                                <span data-en="16 Sparklers" data-dari="زرافشان ۱۶ دانه">16 Sparklers</span>
+                            </li>
+                            <li>
+                                <i class="fas fa-book"></i>
+                                <span data-en="Special & family albums" data-dari="آلبوم خاص و فامیلی">Special & family
+                                    albums</span>
+                            </li>
+                            <li>
+                                <i class="fas fa-image"></i>
+                                <span data-en="Large photo (60x90)" data-dari="چاپ عکس بزرگ ۶۰x۹۰">Large photo
+                                    (60x90)</span>
+                            </li>
+                            <li>
+                                <i class="fas fa-film"></i>
+                                <span data-en="Wedding film with songs" data-dari="تدوین فیلم">Wedding film with
+                                    songs</span>
+                            </li>
+                            <li>
+                                <i class="fas fa-hdd"></i>
+                                <span data-en="Hard drive (500GB)" data-dari="هاردیسک ۵۰۰ جی بی">Hard drive
+                                    (500GB)</span>
+                            </li>
+                        </ul>
+
+                        <div class="package-actions">
+                            <a href="contact.html" class="btn-package primary" data-en="Book Golden Package"
+                                data-dari="رزرو پکیج طلایی">Book Golden Package</a>
+                            <a href="gallery.html?filter=wedding" class="btn-package secondary" data-en="View Gallery"
+                                data-dari="مشاهده گالری">View Gallery</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
     <!-- Footer -->
     <footer>
         <div class="container">
@@ -504,32 +615,60 @@
                 <div class="footer-section">
                     <h3 data-en="Quick Links" data-dari="لینک‌های سریع">Quick Links</h3>
                     <ul>
-                        <li><a href="index.html" data-en="Home" data-dari="خانه">Home</a></li>
-                        <li><a href="about.html" data-en="About" data-dari="درباره ما">About</a></li>
-                        <li><a href="services.html" data-en="Services" data-dari="خدمات">Services</a></li>
-                        <li><a href="contact.html" data-en="Contact" data-dari="تماس">Contact</a></li>
+                        <li>
+                            <a href="index.html" data-en="Home" data-dari="خانه">Home</a>
+                        </li>
+                        <li>
+                            <a href="about.html" data-en="About" data-dari="درباره ما">About</a>
+                        </li>
+                        <li>
+                            <a href="services.html" data-en="Services" data-dari="خدمات">Services</a>
+                        </li>
+                        <li>
+                            <a href="contact.html" data-en="Contact" data-dari="تماس">Contact</a>
+                        </li>
                     </ul>
                 </div>
                 <div class="footer-section">
                     <h3 data-en="Services" data-dari="خدمات">Services</h3>
                     <ul>
-                        <li><a href="services.html" data-en="Wedding Photography" data-dari="عکاسی عروسی">Wedding Photography</a></li>
-                        <li><a href="services.html" data-en="Portrait Photography" data-dari="عکاسی پرتره">Portrait Photography</a></li>
-                        <li><a href="services.html" data-en="Family Photography" data-dari="عکاسی خانوادگی">Family Photography</a></li>
+                        <li>
+                            <a href="services.html" data-en="Wedding Photography" data-dari="عکاسی عروسی">Wedding
+                                Photography</a>
+                        </li>
+                        <li>
+                            <a href="services.html" data-en="Portrait Photography" data-dari="عکاسی پرتره">Portrait
+                                Photography</a>
+                        </li>
+                        <li>
+                            <a href="services.html" data-en="Family Photography" data-dari="عکاسی خانوادگی">Family
+                                Photography</a>
+                        </li>
                     </ul>
                 </div>
                 <div class="footer-section">
-                    <h3 data-en="Contact Info" data-dari="معلومات تماس">Contact Info</h3>
-                    <p><i class="fas fa-phone"></i> <span data-en="+93748030403" data-dari="+۹۳۷۴۸۰۳۰۴۰۳">+93748030403</span></p>
+                    <h3 data-en="Contact Info" data-dari="معلومات تماس">
+                        Contact Info
+                    </h3>
+                    <p>
+                        <i class="fas fa-phone"></i>
+                        <span data-en="+93748030403" data-dari="+۹۳۷۴۸۰۳۰۴۰۳">+93748030403</span>
+                    </p>
                     <p><i class="fas fa-envelope"></i> info@kayhanstudio.com</p>
-                    <p><i class="fas fa-map-marker-alt"></i> <span data-en="Kabul, Afghanistan" data-dari="کابل، افغانستان">Kabul, Afghanistan</span></p>
+                    <p>
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span data-en="Kabul, Afghanistan" data-dari="کابل، افغانستان">Kabul, Afghanistan</span>
+                    </p>
                 </div>
             </div>
             <a href="https://wa.me/93748030403" class="whatsapp-button" target="_blank" aria-label="Chat on WhatsApp">
                 <i class="fab fa-whatsapp"></i>
             </a>
             <div class="footer-bottom">
-                <p data-en="&copy; 2025 Kayhan Studio. All rights reserved." data-dari="&copy; ۲۰۲۵ استدیو کیهان. تمام حقوق محفوظ است.">&copy; 2025 Kayhan Studio. All rights reserved.</p>
+                <p data-en="&copy; 2025 Kayhan Studio. All rights reserved."
+                    data-dari="&copy; ۲۰۲۵ استدیو کیهان. تمام حقوق محفوظ است.">
+                    &copy; 2025 Kayhan Studio. All rights reserved.
+                </p>
             </div>
         </div>
     </footer>
@@ -537,4 +676,5 @@
     <!-- JavaScript -->
     <script src="script.js"></script>
 </body>
+
 </html>

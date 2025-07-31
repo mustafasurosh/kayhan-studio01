@@ -29,6 +29,7 @@
                     <li><a href="gallery.html" data-en="Gallery" data-dari="گالری">Gallery</a></li>
                     <li><a href="contact.html" data-en="Contact" data-dari="تماس">Contact</a></li>
                 </ul>
+                  
                 <button class="language-toggle" onclick="toggleLanguage()">
                     <i class="fas fa-globe"></i>
                     <span id="lang-text">دری</span>
@@ -37,6 +38,18 @@
                     <i class="fas fa-moon" id="theme-icon"></i>
                     <span id="theme-text">Dark</span>
                 </button>
+                 <div class="search-container">
+            <input
+              type="text"
+              id="searchInput"
+              data-en="Search..."
+              data-dari="جستجو..."
+              placeholder="Search..."
+            />
+            <button type="button" class="search-btn" onclick="performSearch()">
+              <i class="fas fa-search"></i>
+            </button>
+          </div>
             </div>
         </nav>
     </header>
